@@ -1,0 +1,16 @@
+<div class="container pt-4">
+    <div classe="row">
+      <div classe="col-3 m-2 p-4 border">
+        city name : {{apiService.weatherData.city.name}}
+      </div>
+      <div classe="col m-2 p-4 border">
+        <div calsse="row">
+          <div classe="col m-1 p-1 border" *ngFor="let weather of weatherData?.list">
+            <img src="http://openweathermap.org/img/wn/{{weather.weather[0].icon}}@2x.png">
+            <p>{{weather.dt * 1000 | date:'fullDate'}}</p>
+            <p>{{weather.temp.day}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
